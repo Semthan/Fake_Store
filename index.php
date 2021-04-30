@@ -15,16 +15,16 @@
 
             <?php
 
-
+            //endpoint
             $url = "https://fakestoreapi.com/products";
 
-
+            //get data from api
             $json = file_get_contents($url);
 
-
+            //convert json to array
             $data = json_decode($json, true);
 
-
+            //render items(products)
             foreach ($data as $key => $product) {
 
                 $card = '';
